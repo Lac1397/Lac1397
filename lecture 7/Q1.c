@@ -1,11 +1,31 @@
 #include <stdio.h>
+#include <math.h>
      // function blueprint
-int add(int a, int b) { return a + b; }
-int sub(int a, int b) { return a - b; }
-int mul(int a, int b) { return a * b; }
-float div(float a, float b) { return a / b; }
-int mod(int a, int b) { return a % b; }
+float add(float a, float b); 
+float sub(float a, float b); 
+float mul(float a, float b); 
+float div(float a, float b); 
+float mod(float a, float b); 
       //user defined function
+float add(float a, float b) {
+    return a + b;
+}
+
+float sub(float a, float b) {
+    return a - b;
+}
+
+float mul(float a, float b) {
+    return a * b;
+}
+
+float div(float a, float b) {
+    return a / b;
+}
+
+float mod(float a, float b) {
+    fmod(a, b);
+}
 int main(void) {
   char choice;
   int a, b, result;
@@ -25,34 +45,34 @@ int main(void) {
     switch (choice) {
     case '+':
       printf("enter two numbers:\n ");
-      scanf("%d %d", &a, &b);
-      printf("The Result is %d\n", add(a, b));
+      scanf("%f %f", &a, &b);
+      printf("The Result is %f\n", add(a, b));
       break;
     case '-':
       printf("enter two numbers:\n ");
-      scanf("%d %d", &a, &b);
-      printf("The Result is %d\n", sub(a, b));
+      scanf("%f %f", &a, &b);
+      printf("The Result is %f\n", sub(a, b));
       break;
     case '*':
       printf("enter two numbers:\n ");
-      scanf("%d %d", &a, &b);
-      printf("The Result is %d\n", mul(a, b));
+      scanf("%f %f", &a, &b);
+      printf("The Result is %f\n", mul(a, b));
       break;
     case '/':
       printf("enter two numbers:\n ");
-      scanf("%d %d", &a, &b);
+      scanf("%f %f", &a, &b);
       printf("The Result  is %f\n", div(a, b));
       break;
       printf("Invalid operator");
     case '%':
-      printf("enter two numbers:\n ");
+      printf("Enter two integers for modulo: ");
       scanf("%d %d", &a, &b);
       if (b != 0) {
-        printf("Result: %d\n", mod(a, b));
+          printf("Result: %f\n", mod(a, b));
       } else {
-        printf("Error: Modulo by zero!\n");
-        printf("The Result is %d\n", mod(a, b));
+          printf("Error: Cannot calculate modulo with divisor zero.\n");
       }
+      break;
     case 'q':
       printf("Exiting the program. Goodbye!\n");
       break;
