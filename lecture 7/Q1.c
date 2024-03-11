@@ -28,7 +28,7 @@ float mod(float a, float b) {
 }
 int main(void) {
   char choice;
-  int a, b, result;
+  float a, b, result;
 
   do {
 
