@@ -66,7 +66,7 @@ int main(void) {
       printf("Invalid operator");
     case '%':
       printf("Enter two integers for modulo: ");
-      scanf("%d %d", &a, &b);
+      scanf("%f %f", &a, &b);
       if (b != 0) {
           printf("Result: %f\n", mod(a, b));
       } else {
