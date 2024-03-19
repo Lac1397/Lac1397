@@ -21,7 +21,7 @@ int count = 0;
       }
   }
   
-  if(count>0){
+  if(count==0){
     printf("Not Palindrome");
   }else{
     printf("Palindrome");
